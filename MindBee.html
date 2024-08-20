@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,37 +64,13 @@
             color: #f4f4f4;
         }
 
-        /* Responsive Navbar */
-        @media (max-width: 768px) {
-            nav .container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: flex-start;
-                width: 100%;
-                margin-top: 10px;
-            }
-
-            nav ul li {
-                margin-left: 0;
-                margin-bottom: 10px;
-            }
-
-            nav ul li a {
-                font-size: 1rem;
-            }
-        }
-
         /* Main content styling */
         header {
             background: #333;
             color: #fff;
             padding: 6rem 1rem 3rem;
             text-align: center;
-            margin-top: 60px;
+            margin-top: 60px; /* Space for fixed navbar */
             perspective: 1000px;
         }
 
@@ -114,21 +89,6 @@
 
         main {
             padding: 2rem 1rem;
-        }
-
-        /* Responsive Main Content */
-        @media (max-width: 768px) {
-            header .container {
-                transform: none;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
         }
 
         /* Vision and Mission Section */
@@ -152,29 +112,6 @@
             margin-bottom: 1rem;
         }
 
-        /* About Us Section */
-        .about-us {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 2rem;
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .about-us h2 {
-            margin-bottom: 1rem;
-            font-size: 2rem;
-            color: #333;
-        }
-
-        .about-us p {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
         /* Service Cards */
         .services {
             display: flex;
@@ -193,19 +130,11 @@
             transform: rotateX(10deg);
             transform-style: preserve-3d;
             transition: transform 0.3s, background 0.3s;
-            margin-bottom: 20px;
         }
 
         .service-card:hover {
             transform: rotateX(0deg) scale(1.05);
             background: #e2e2e2;
-        }
-
-        /* Responsive Service Cards */
-        @media (max-width: 768px) {
-            .service-card {
-                width: 100%;
-            }
         }
 
         /* New Services Section */
@@ -318,8 +247,7 @@
             margin: 0 auto;
         }
 
-        .contact input,
-        .contact textarea {
+        .contact input, .contact textarea {
             padding: 0.5rem;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -340,13 +268,6 @@
             background: #555;
         }
 
-        /* Responsive Contact Section */
-        @media (max-width: 768px) {
-            .contact form {
-                width: 100%;
-            }
-        }
-
         /* Footer */
         footer {
             background: #333;
@@ -362,120 +283,79 @@
         }
     </style>
 </head>
-
 <body>
-    <!-- Navbar -->
     <nav>
         <div class="container">
             <div class="logo">MindBee Tech</div>
             <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#internship">Internship</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <header id="hero">
+    <header id="home">
         <div class="container">
-            <h1>Welcome to MindBee Tech</h1>
-            <p>Your partner in innovative IT solutions.</p>
+             <h1>Buzzing with Innovative IT Solutions</h1>
+            <p>We empower businesses with cutting-edge technology.</p>
         </div>
     </header>
-
     <main>
-        <!-- Mission Section -->
-        <section class="vision-mission" id="mission">
-            <h2>Our Mission</h2>
-            <p>To provide cutting-edge technology solutions that drive business success and innovation.</p>
-        </section>
-
-        <!-- About Us Section -->
-        <section class="about-us" id="about">
+        <section class="vision-mission">
             <h2>About Us</h2>
-            <p>MindBee Tech is a leading IT company that specializes in delivering high-quality technology services and solutions to businesses of all sizes. Our team of experts is dedicated to helping our clients achieve their goals through innovative technology and exceptional customer service.</p>
+            <p>MindBee Tech is a forward-thinking IT company dedicated to providing cutting-edge solutions that meet the evolving needs of businesses.</p>
+            <p>With a team of skilled professionals, we specialize in software development, consulting, and IT support, ensuring our clients stay ahead in a competitive market.</p> <p>Our commitment to innovation and excellence drives us to deliver results that exceed expectations.</p>
         </section>
-
-        <!-- Services Section -->
-        <section class="services" id="services">
+        <section class="vision-mission">
+            <h2>Our Mission</h2>
+            <p>To deliver exceptional IT solutions that empower businesses to achieve their goals and drive growth. We are committed to innovation, excellence, and customer satisfaction, providing services that leverage the latest technologies to solve complex challenges and create value.</p>
+        </section>
+        <section class="our-services">        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our Services &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
             <div class="service-card">
-                <h3>Web Development</h3>
-                <p>Building responsive and dynamic websites tailored to your business needs.</p>
+                <h3>Consulting</h2>
+                <p>Expert advice to help your business grow.</p>
             </div>
             <div class="service-card">
-                <h3>Mobile App Development</h3>
-                <p>Creating intuitive and user-friendly mobile applications for Android and iOS platforms.</p>
+                <h3>Development</h2>
+                <p>Custom software solutions tailored to your needs.</p>
             </div>
             <div class="service-card">
-                <h3>Cloud Computing</h3>
-                <p>Providing scalable cloud solutions to help your business grow and thrive.</p>
+                <h3>Support</h2>
+                <p>24/7 support to ensure your operations run smoothly.</p>
             </div>
         </section>
-
-        <!-- New Services Section -->
-        <section class="our-services" id="services">
-            <h2>Our Services</h2>
-            <p>At MindBee Tech, we offer a wide range of services to meet your technology needs.</p>
+        <section id="internship" class="internship">
+            <h2>Join Our Internship Program</h2>
+            <p>Gain hands-on experience and work on real-world projects with our experienced team. Our internship offers a comprehensive learning experience in the following areas:</p>
             <ul>
-                <li>Custom Software Development</li>
-                <li>IT Consulting</li>
-                <li>Cybersecurity Solutions</li>
-                <li>Data Analytics and AI</li>
-                <li>Technical Support and Maintenance</li>
+                <li><strong>Fullstack Development:</strong> Work with .NET and Java technologies.</li>
+                <li><strong>Artificial Intelligence:</strong> Explore and contribute to AI projects.</li>
+                <li><strong>Cybersecurity:</strong> Get involved in securing systems and data.</li>
             </ul>
-        </section>
-
-        <!-- Internship Program Section -->
-        <section class="internship" id="internship">
-            <h2>Internship Program</h2>
-            <p>Join our team and gain hands-on experience in the following areas:</p>
-            <ul>
-                <li>Full Stack Development in .NET and Java</li>
-                <li>Artificial Intelligence</li>
-                <li>Cybersecurity</li>
-            </ul>
+            <p><strong>Duration:</strong> 3 months</p>
+            <p><strong>Location:</strong> Remote</p>
+            <p><strong>Requirements:</strong> Basic knowledge in IT and enthusiasm to learn.</p>
             <button class="apply-button">Apply Now</button>
         </section>
-
-        <!-- Contact Section -->
-        <section class="contact" id="contact">
-            <h2>Contact Us</h2>
-            <p>We would love to hear from you. Fill out the form below to get in touch.</p>
-            <form id="contact-form">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <section id="contact" class="contact">
+            <h2>Get in Touch</h2>
+            <p>We’d love to hear from you! Fill out the form below or reach out to us via email.</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 MindBee Tech. All rights reserved.</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script>
-        (function () {
-            emailjs.init("YOUR_EMAILJS_USER_ID");
-        })();
-
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-                .then(function () {
-                    alert('Your message was sent successfully!');
-                }, function (error) {
-                    alert('Failed to send your message. Please try again later.');
-                });
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Page loaded and ready!');
         });
     </script>
 </body>
-
 </html>
