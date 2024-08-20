@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBee Tech</title>
+    <style>
+ 
+ /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar styling */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
+}
+
+/* Main content styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 6rem 1rem 3rem;
+    text-align: center;
+    margin-top: 60px; /* Space for fixed navbar */
+    perspective: 1000px;
+}
+
+header .container {
+    transform: rotateX(10deg);
+    transform-style: preserve-3d;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+main {
+    padding: 2rem 1rem;
+}
+
+/* Vision and Mission Section */
+.vision-mission {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.vision-mission h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.vision-mission p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Service Cards */
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.3rem;
+    width: 30%;
+    text-align: center;
+    transform: rotateX(10deg);
+    transform-style: preserve-3d;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.service-card:hover {
+    transform: rotateX(0deg) scale(1.05);
+    background: #e2e2e2;
+}
+
+/* New Services Section */
+.our-services {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.our-services h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.our-services p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.our-services ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+.our-services li {
+    margin-bottom: 0.5rem;
+}
+
+/* Internship Program Section */
+.internship {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.internship h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.internship p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.internship ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+.internship li {
+    margin-bottom: 0.5rem;
+}
+
+.internship .apply-button {
+    background: #333;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.internship .apply-button:hover {
+    background: #555;
+}
+
+/* Contact Section */
+.contact {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    background: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.contact button:hover {
+    background: #555;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .service-card {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .our-services,
+    .internship,
+    .contact {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .logo {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .service-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .vision-mission h2,
+    .our-services h2,
+    .internship h2,
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .vision-mission p,
+    .our-services p,
+    .internship p,
+    .contact p {
+        font-size: 1rem;
+    }
+
+    .our-services ul,
+    .internship ul {
+        padding-left: 15px;
+    }
+
+    .internship .apply-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .contact form {
+        padding: 0 1rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+
+       
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">MindBee Tech</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#internship">Internship</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header id="home">
+        <div class="container">
+             <h1>Buzzing with Innovative IT Solutions</h1>
+            <p>We empower businesses with cutting-edge technology.</p>
+        </div>
+    </header>
+    <main>
+        <section class="vision-mission">
+            <h2>About Us</h2>
+            <p>MindBee Tech is a forward-thinking IT company dedicated to providing cutting-edge solutions that meet the evolving needs of businesses.</p>
+            <p>With a team of skilled professionals, we specialize in software development, consulting, and IT support, ensuring our clients stay ahead in a competitive market.</p> <p>Our commitment to innovation and excellence drives us to deliver results that exceed expectations.</p>
+        </section>
+        <section class="vision-mission">
+            <h2>Our Mission</h2>
+            <p>To deliver exceptional IT solutions that empower businesses to achieve their goals and drive growth. We are committed to innovation, excellence, and customer satisfaction, providing services that leverage the latest technologies to solve complex challenges and create value.</p>
+        </section>
+        <section class="our-services">        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our Services &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            <div class="service-card">
+                <h3>Consulting</h2>
+                <p>Expert advice to help your business grow.</p>
+            </div>
+            <div class="service-card">
+                <h3>Development</h2>
+                <p>Custom software solutions tailored to your needs.</p>
+            </div>
+            <div class="service-card">
+                <h3>Support</h2>
+                <p>24/7 support to ensure your operations run smoothly.</p>
+            </div>
+        </section>
+        <section id="internship" class="internship">
+            <h2>Join Our Internship Program</h2>
+            <p>Gain hands-on experience and work on real-world projects with our experienced team. Our internship offers a comprehensive learning experience in the following areas:</p>
+            <ul>
+                <li><strong>Fullstack Development:</strong> Work with .NET and Java technologies.</li>
+                <li><strong>Artificial Intelligence:</strong> Explore and contribute to AI projects.</li>
+                <li><strong>Cybersecurity:</strong> Get involved in securing systems and data.</li>
+            </ul>
+            <p><strong>Duration:</strong> 3 months</p>
+            <p><strong>Location:</strong> Remote</p>
+            <p><strong>Requirements:</strong> Basic knowledge in IT and enthusiasm to learn.</p>
+            <button class="apply-button">Apply Now</button>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Get in Touch</h2>
+            <p>We’d love to hear from you! Fill out the form below or reach out to us via email.</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MindBee Tech. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Page loaded and ready!');
+        });
+    </script>
+</body>
+</html>
